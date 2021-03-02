@@ -1,6 +1,10 @@
 /* -------------------------- GLOBAL STYLES -------------------------- */
+html {
+  box-shadow: 0 0 0 30px #000 inset;
+  padding: 0 30px;
+}
 a {
-  color: #f00;
+  color: #6397b5;
 }
 body {
   font-family: helvetica, arial, sans;
@@ -9,44 +13,178 @@ h1 {
   font-size: 7vw;
   margin-top: 0;
 }
+h2 {
+  font-size: 2em;
+}
+/* h2 ~ p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1em auto 0;
+  max-width: 70%;
+  text-align: center;
+} */
+p {
+  line-height: 1.5;
+}
 
 /* -------------------------- HEADER STYLES -------------------------- */
 
+.header {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+.header-logo {
+  background-color: #000;
+  box-sizing: border-box;
+  display: block;
+  height: 10vh;
+  left: -30px;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  width: 10vh;
+}
 .header-logo:hover,
 .header-logo:active {
-  opacity: 0.5;
-
+  background-color: #ed6e2f;
+}
+.header-logo img {
+  width: 4.3vh;
 }
 .header-nav {
   float: right;
   padding: 5.5vh 60px 0 0;
 }
+.header-nav a {
+  color: #fff;
+}
 .header-nav > li {
   display: inline-block;
   margin-left: 1em;
+}
+.header-nav > li ~ li {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1em;
 }
 .header-nav > li:first-child a {
   color: #ed6e2f;
 }
 .header-nav > li:first-child a:hover {
-  color: #000;
+  color: #fff;
 }
-.header-nav a {
-  color: #000;
+.nav-links a {
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
-.header-nav a:hover,
-.header-nav a:active {
+.nav-links a:hover,
+.nav-links a:active {
   color: #ed6e2f;
 }
 
+/* -------------------------- FOOTER STYLES -------------------------- */
+
+.footer {
+  background-color: #000;
+  padding: 10vh 0 15vh;
+  text-align: center;
+}
+.footer h3 {
+  color: #fff;
+  padding-top: 1.5em;
+  text-transform: uppercase;
+}
+.footer h3 span {
+  color: #aaa;
+}
+.footer-logo img {
+  width: 50px;
+}
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+.footer-nav a {
+  color: #ccc;
+}
+.social-footer li {
+  display: inline-block;
+  margin: 3vh 1em 0;
+}
 /* -------------------------- HERO STYLES -------------------------- */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
+}
+.full-hero:after {
+  border: 10px solid;
+  border-color: #fff transparent transparent;
+  bottom: 2vh;
+  color: #fff;
+  content: "";
+  height: 0;
+  width: 0;
+  font-size: 36px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #557c83;
+}
+.hero-content .social-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+}
+
+/* -------------------------- HOMEPAGE STYLES -------------------------- */
+
+.home-callout {
+  background-color: #000;
+  color: #fff;
+  padding: 7vh 0;
+}
+.callout-copy {
+  font-size: 0.8rem;
+}
+.callout-title {
+  font-size: 5.75vh;
+  text-align: right;
+  text-transform: uppercase;
+}
+.home-section {
+  margin: 6rem;
+  max-width: 980px;
+  width: 90vw;
+}
+.home-section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 /* -------------------------- SOCIAL STYLES -------------------------- */
@@ -83,30 +221,29 @@ h1 {
 
 /* -------------------------- BIO STYLES -------------------------- */
 .bio-box {
-  border: 1px solid #000;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
-  margin: 40px 1% 0;
-  padding: 2%;
-  width: 23%;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 .bio-box h3 {
   color: #fff;
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 .bio-box img {
   width: 100%;
 }
 .bio-box .social-link {
   display: block;
-  margin: 2em 0 1em;
+  margin: 2em auto 1em;
 }
 .bio-copy{
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 0.75em;
 }
 .bio-copy a {
   color: #008000; /* color: green */
@@ -126,26 +263,3 @@ h1 {
   height: 0;
   margin: 0 auto 30px;
 }
-
-/* .centering-test {
-  margin: auto;
-  width: inherit;
-  display: block;
-  text-align: center;
-} */
-
-/* THROWAWAY STYLES */
-/* .test-box {
-  background: #9db6dd;
-  margin: 50px;
-  width: 200px;
-}
-.test-box-nosizing {
-  border: 10px solid #000;
-  padding: 40px;
-}
-.test-box-sizing {
-  box-sizing: border-box;
-  margin-top: 100px;
-  width: auto;
-} */
