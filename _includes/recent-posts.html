@@ -1,0 +1,10 @@
+<ul class="blog-title-list">
+  {% for post in site.posts limit:5 %}
+    <li>
+      <img src="{{ post.gravatar }}" class="aside-avatar">
+      <span>{{ post.author }}</span>                        <!-- Added -->
+      <a href="{{ post.url }}">{{ post.title }}</a>         <!-- Added -->
+      <span>Posted: {{ post.date | date: '%B %d, %Y' }} </span>
+    </li>
+  {% endfor %}
+</ul>

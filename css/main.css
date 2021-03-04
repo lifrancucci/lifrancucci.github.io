@@ -126,6 +126,11 @@ p {
 
 /* -------------------------- BLOG STYLES -------------------------- */
 
+.aside-avatar {               /* Added */
+  border-radius: 50%;
+  display: inline-block;
+  height: 2em;
+}
 .blog-recent {
   text-align: right;
 }
@@ -134,7 +139,7 @@ p {
   padding: 0;
 }
 .blog-title-list li ~ li {
-  margin-top: 1,5em;
+  margin-top: 1.5em;
 }
 .blog-title-list span {
   color: #999;
@@ -150,6 +155,26 @@ p {
 }
 .blog-posts .post-header {
   font-size: 0.8rem;
+}
+.post .post-header {
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+.post-aside {
+  background-color: rgba(0, 0, 0, 0.01);
+  float: right;
+  margin: 0 0 2em 2em;
+  padding: 2em;
+}
+.post-content {
+  font-size: 1.1rem;
+}
+.post-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 3em;
+  padding-top: 2em;
 }
 .post-header {
   margin-bottom: 1.5em;
@@ -181,6 +206,23 @@ p {
 }
 .page h4 {
   margin-bottom: 1em;
+}
+.post {
+  width: 100%;
+}
+.post-content,
+.post-footer {
+  margin: auto;
+  max-width: 40em;
+  width: 85vw;
+}
+.pull-left {
+  float: left;
+  margin: 2em 2em 2em -2%;
+}
+.pull-right {
+  float: right;
+  margin: 2em -2% 2em 2em;
 }
 
 /* -------------------------- COLUMN STYLES -------------------------- */
@@ -258,6 +300,7 @@ p {
 }
 
 /* -------------------------- HERO STYLES -------------------------- */
+
 .full-hero {
   background-color: #c7dbfc;
   background-size: cover;
@@ -277,6 +320,11 @@ p {
   left: 50%;
   position: absolute;
   transform: translate(-50%, 0);
+}
+.half-hero {
+  background-position: center center;
+  background-size: cover;
+  height: 60vh;
 }
 .hero-content {
   color: #fff;
@@ -336,6 +384,17 @@ p {
 .home-section h2 {
   margin-bottom: 1.5rem;
   text-align: center;
+}
+.home-section h4 {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.home-section .post-header {
+  text-align: center;
+}
+.home-section .blog-posts {
+  margin: auto;
+  width: 75%;
 }
 
 /* -------------------------- SOCIAL STYLES -------------------------- */
