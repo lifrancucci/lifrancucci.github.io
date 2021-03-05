@@ -258,6 +258,90 @@ p {
   flex: 0 1 20em;
 }
 
+/* -------------------------- DROPDOWN STYLES -------------------------- */
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .drop-menu {
+  display: block;
+}
+.dropdown:hover .drop-trigger:after {
+  border-color: #ed6e2f transparent transparent;
+}
+.drop-menu {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  list-style: none;
+  padding: 1em 0 0;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+.drop-menu:before {
+  border: 0.6em solid;
+  border-color: transparent transparent #fff;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 1em;
+  top: -0.1em;
+  width: 0;
+}
+.drop-menu li {
+  background-color: #fff;
+}
+.drop-menu li ~ li {
+  border-top: 1px dotted rgba(0, 0, 0, 0.1);
+}
+.drop-menu li:first-child {
+  border-radius: 5px 5px 0 0;
+  color: #999;
+  font-size: 0.5em;
+  padding: 1em 1em 0.25em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.drop-menu li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.drop-menu a {
+  color: #333;
+  display: block;
+  font-weight: normal;
+  padding: 0.5em 2em 0.5em 1em;
+  text-align: left;
+  text-transform: none;
+  white-space: nowrap;
+}
+.drop-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+.drop-trigger {
+  display: inline-block;
+  padding-right: 1.5em;
+  position: relative;
+}
+.drop-trigger:after {
+  border: 0.3em solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0.3em;
+  width: 0;
+}
+/* HIDE IN THE FOOTER */
+.footer .dropdown:hover .drop-menu,
+.footer .drop-trigger:after {
+  display: none;
+}
+.footer .drop-trigger {
+  padding-right: 0;
+}
+
+
 /* -------------------------- GALLERY STYLES -------------------------- */
 
 .gallery-info {
@@ -486,6 +570,10 @@ p {
   .header-nav {
     padding: 2vh 1em 0 0;
   }
+  .header-nav a,
+  .drop-trigger {
+    color: #fff;
+  }
   .header-nav > li {
     margin-left: 0.25em;
   }
@@ -495,14 +583,20 @@ p {
   .nav-links a {
     font-size: 3.25vw;
   }
+  .nav-links a,
+  .drop-trigger {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
   .header-logo {
     left: auto;
   }
 
   /* BLOG STYLES */
   .blog-recent {
-    
-    /* display: none; */
+    display: none;
   }
   .blog-previews {
     padding: 0;
@@ -512,15 +606,12 @@ p {
   }
 
   /* HOME STYLES */
-  .home {
-    width: 100vw; /* Agregado para que full-hero tenga el width de pantalla */
-  }
   .home-callout {
     flex-direction: column;
   }
+  /* Agregado para que Most Recent Post y las Bios
+  no sobrepasen el width de pantalla */
   .home-section {
-    /* Agregado para que Most Recent Post y las Bios
-    no sobrepasen el width de pantalla */
     width: auto;
     margin-left: 5%;
     margin-right: 5%;
