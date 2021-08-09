@@ -1,0 +1,39 @@
+body {
+  background-color: #111111;
+  color: #c72d0a;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background-image: url("../img/sea.jpg");
+  background-size: cover;
+  background-position: -800px bottom;
+  width: 100vw;
+  height: 100vh;
+  text-align: left;
+}
+.header-gradient {
+  background-image: radial-gradient(transparent 40%, rgba(17,17,17,0.9));
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+h1, h2 {
+  padding-left: 5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bolder;
+}
+h1 {
+  font-size: 7.5rem;
+  /* padding-top: 30rem; */
+  animation: title-enter 2s linear forwards, 
+}
+h2 {
+  font-size: 5.5rem;
+  padding-top: 3rem;
+}
