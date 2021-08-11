@@ -1,39 +1,73 @@
 body {
   background-color: #111111;
-  color: #c72d0a;
   font-family: 'Open Sans', sans-serif;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .header {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: center;
-  background-image: url("../img/sea.jpg");
-  background-size: cover;
-  background-position: -800px bottom;
-  width: 100vw;
+  /* justify-content: center; */
+  max-width: 100vw;
   height: 100vh;
   text-align: left;
+  overflow: hidden;
+}
+.bkg-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.bkg-image img {
+  width: 300%;
+  position: absolute;
+  top: 0;
+  transform: rotate(180deg);
 }
 .header-gradient {
-  background-image: radial-gradient(transparent 40%, rgba(17,17,17,0.9));
-  position: absolute;
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(rgba(17,17,17,0.9) 0%, transparent 40% 60%, rgba(17,17,17,0.9) 90%);
+  position: absolute;
+}
+.header-titles {
+  color: #f2a705;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
 }
 h1, h2 {
-  padding-left: 5rem;
+  padding-left: 1.5rem;
   text-transform: uppercase;
   font-style: italic;
   font-weight: bolder;
 }
 h1 {
-  font-size: 7.5rem;
-  /* padding-top: 30rem; */
-  animation: title-enter 2s linear forwards, 
+  font-size: 3.5rem;
+  padding-top: 35vh;
+  /* animation: title-enter 1s linear forwards; */
+}
+@keyframes title-enter {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 h2 {
-  font-size: 5.5rem;
-  padding-top: 3rem;
+  font-size: 2rem;
+  padding-top: 2rem;
+  /* animation: portfolio-enter 1s linear forwards; */
+}
+@keyframes portfolio-enter {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
