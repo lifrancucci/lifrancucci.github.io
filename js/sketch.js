@@ -1,3 +1,5 @@
+let canvasWidth, canvasHeight;
+
 let colorFg = "#111111";
 let colorBg = "#f1f1f1";
 let colorTxt = "#d90921"
@@ -18,16 +20,18 @@ function preload() {
 }
 
 function setup() {
-  frameRate(30);
-  let myCanvas = createCanvas(600, 600);
+  canvasWidth = 600;
+  canvasHeight = 600;
+  //frameRate(30);
+  let myCanvas = createCanvas(canvasWidth, canvasHeight);
   myCanvas.parent('sketchContainer');
   background(colorBg);
-  tilesX = 80;
-  tilesY = 1;
+  rectMode(CENTER);
+  tilesX = 100;
+  tilesY = 10;
   tileSize = width/tilesX;
-  pgTxt = createGraphics(600, 600);
-  pgWaves = createGraphics(200, 200);
-  imgBkg.resize(600, 600);
+  pgTxt = createGraphics(canvasWidth, canvasHeight);
+  imgBkg.resize(canvasWidth, canvasHeight);
   maxDistance = dist(0, 0, width, height);
 }
 
@@ -43,13 +47,15 @@ function draw() {
       let pixelColor = imgBkg.get(x, y);
       let b = map(brightness(pixelColor), 0, 255, 1, 0);
 
-      let mouseSize = dist(mouseX, mouseY, x, y);
-      mouseSize = mouseSize/maxDistance  * -200;
-
+      // Pointer effect (SLOWWWWW)
+      // let mouseSize = dist(mouseX, mouseY, x, y);
+      // mouseSize = mouseSize/maxDistance * -200;
       // Push the tile to the matrix
       push();
       translate(x + tileSize/2, y + tileSize/2);
-      ellipse(0, 0, b * tileSize, (b * tileSize) + mouseSize/1.8);
+      // To add pointer effect:
+      // add "+ mouseSize/1.8" to last argument
+      rect(0, 0, (b * tileSize), (b * tilesY));
       pop(); // Pop it at the end
     }
   }
@@ -58,15 +64,15 @@ function draw() {
   pgTxt.fill(colorTxt);
   pgTxt.textFont(imgFont);
   pgTxt.push();
-  pgTxt.translate(20, height/2-110);
+  pgTxt.translate(20, height/2-70);
   pgTxt.textAlign(LEFT, BOTTOM);
   pgTxt.textSize(120);
   pgTxt.text("LI",0, 0);
   pgTxt.text("FRAN",0, 100);
   pgTxt.text("CU",0, 200);
   pgTxt.text("CCI",0, 300);
-  pgTxt.textSize(40);
-  pgTxt.text("DESARROLLO CREATIVO", 6, 310);
+  pgTxt.textSize(42);
+  pgTxt.text("DESARROLLO CREATIVO", 6, 325);
   pgTxt.pop();
   image(pgTxt,0,0); // Show the text
 
