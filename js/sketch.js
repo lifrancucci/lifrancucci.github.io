@@ -22,8 +22,8 @@ function preload() {
 function setup() {
   canvasWidth = 600;
   canvasHeight = 600;
-  //frameRate(30);
-  let myCanvas = createCanvas(canvasWidth, canvasHeight);
+  frameRate(20);
+  let myCanvas = createCanvas(canvasWidth, canvasHeight, P2D);
   myCanvas.parent('sketchContainer');
   background(colorBg);
   rectMode(CENTER);
@@ -50,21 +50,21 @@ function draw() {
       // Pointer effect (SLOWWWWW)
       // let mouseSize = dist(mouseX, mouseY, x, y);
       // mouseSize = mouseSize/maxDistance * -200;
-      // Push the tile to the matrix
+      //Push the tile to the matrix
       push();
       translate(x + tileSize/2, y + tileSize/2);
       // To add pointer effect:
       // add "+ mouseSize/1.8" to last argument
-      rect(0, 0, (b * tileSize), (b * tilesY));
+      rect(0, 0, (b * tileSize), (b * tilesY) + (mouseX * 0.1));
       pop(); // Pop it at the end
     }
   }
 
-  // Text:
+  // // Text:
   pgTxt.fill(colorTxt);
   pgTxt.textFont(imgFont);
   pgTxt.push();
-  pgTxt.translate(20, height/2-70);
+  pgTxt.translate(20, height/2-90);
   pgTxt.textAlign(LEFT, BOTTOM);
   pgTxt.textSize(120);
   pgTxt.text("LI",0, 0);
@@ -72,9 +72,9 @@ function draw() {
   pgTxt.text("CU",0, 200);
   pgTxt.text("CCI",0, 300);
   pgTxt.textSize(42);
-  pgTxt.text("DESARROLLO CREATIVO", 6, 325);
+  pgTxt.text("DESARROLLO CREATIVO", 6, 320);
   pgTxt.pop();
   image(pgTxt,0,0); // Show the text
 
-  print(frameCount);
+  // print(frameCount);
 }
