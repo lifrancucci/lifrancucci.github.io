@@ -22,9 +22,9 @@ function preload() {
 function setup() {
   canvasWidth = 600;
   canvasHeight = 600;
-  frameRate(20);
-  let myCanvas = createCanvas(canvasWidth, canvasHeight, P2D);
-  myCanvas.parent('sketchContainer');
+  frameRate(10);
+  // let myCanvas = createCanvas(canvasWidth, canvasHeight, P2D);
+  // myCanvas.parent('sketchContainer');
   background(colorBg);
   rectMode(CENTER);
   tilesX = 100;

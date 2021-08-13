@@ -1,12 +1,12 @@
 body {
   background-color: #111111;
-  color: white;
+  color: #f1f1f1;
   font-family: 'Open Sans', sans-serif;
   max-width: 100vw;
 }
 
 .header {
-  color: #f2a705;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,16 +20,47 @@ body {
   overflow: hidden;
   padding: auto;
 }
-.header-titles {
-  display: flex;
-  flex-direction: column;
+.animContainer {
+  background-image: url("../img/test-1.gif");
+  background-position: center 60%;
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
   position: absolute;
 }
+.pageTitle {
+  /* border: 2px solid red; */
+  color: #d90921;
+  font-size: 23vw;
+  text-transform: uppercase;
+  position: absolute;
+  left: 7vw;
+}
+.pageSubtitle {
+  font-size: 10vw;
+}
+
 
 /* WHAT SECTION */
 .whatSection {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
+  flex-direction: column;
   width: 80%;
-  padding:
+  padding: 1.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.whatSection p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-top: 1.5rem;
+}
+.whatSection b {
+  font-weight: bold;
+  color: #d90921;
 }
