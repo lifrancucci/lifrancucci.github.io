@@ -1,20 +1,23 @@
+@font-face {
+  font-family: 'Cocogoose Pro'
+  src: url("../fonts/CocogoosePro-trial.ttf")
+}
+
 :root {
   --clr-dark: #111111;
   --clr-light: #f1f1f1;
   --clr-accent: #d90921;
 }
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
 body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  font-family: 'Open Sans', sans-serif;
-  max-width: 100vw;
-}
-.main-wrapper {
-  width: 100%;
-  height: 100%;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Cocogoose Pro', sans-serif;
+  /* max-width: 100vw; */
 }
 .header {
   display: flex;
@@ -23,37 +26,57 @@ body {
   justify-content: center;
   max-width: 100vw;
   height: 100vh;
+  max-height: 1000px;
   text-align: left;
   text-transform: uppercase;
   font-style: italic;
   font-weight: bolder;
   overflow: hidden;
-  padding: auto;
 }
-.anim-container {
+.header-bkg-container {
   background-image: url("../img/test-1.gif");
   background-position: center 70%;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: absolute;
+  top: 0;
+}
+@media (min-height: 1000px) {
+  .header-bkg-container {
+    background-position: center top;
+  }
 }
 .page-title {
   color: var(--clr-accent);
   font-size: 15vh;
   text-transform: uppercase;
   position: absolute;
-  left: 12vw;
+  left: 1.2rem;
 }
 .page-subtitle {
   color: var(--clr-accent);
   font-size: 4vh;
   margin-top: 2rem;
 }
+@media (max-width: 360px) {
+  .page-title {
+    font-size: 25vw;
+  }
+  .page-subtitle {
+    font-size: 6vw;
+  }
+}
+@media (min-width: 600px) {
+  .page-title {
+    padding-left: 1.5rem;
+  }
+}
 .section {
   display: flex;
   flex-direction: column;
-  padding: 3rem 1.2rem;
+  padding: 3rem 1.5rem;
 }
 @media (min-width: 600px) {
   .section {
@@ -80,7 +103,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .split {
     flex-direction: row;
   }
@@ -98,6 +121,9 @@ body {
 .bkg-light {
   background-color: var(--clr-light);
   color: var(--clr-dark);
+}
+.example {
+  text-align: center;
 }
 .example img {
   width: 90vw;
