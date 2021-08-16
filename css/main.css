@@ -188,7 +188,7 @@ p {
 /* DESKTOP UP */
 @media screen and (min-width: 1200px) {
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .page-title {
     font-size: 20vh;
