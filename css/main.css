@@ -12,13 +12,14 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
-a:hover {
-  cursor: pointer;
-}
 body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   font-family: 'Cocogoose Pro', sans-serif;
+  cursor: default;
+}
+a:hover {
+  cursor: pointer;
 }
 p {
   font-size: 1.3rem;
@@ -78,6 +79,14 @@ p {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
+.section h2:hover {
+  animation: text-anim 0.2s normal linear forwards;
+}
+@keyframes text-anim {
+  100% {
+    transform: scale(1.02);
+  }
+}
 .split {
   display: flex;
   flex-direction: column;
@@ -93,6 +102,15 @@ p {
 .example img {
   width: 90vw;
   max-width: 450px;
+  filter: grayscale(100%);
+}
+.example img:hover {
+  animation: img-color 0.2s normal linear forwards;
+}
+@keyframes img-color {
+  100% {
+    filter: grayscale(0%);
+  }
 }
 
 /* CONTACT */
