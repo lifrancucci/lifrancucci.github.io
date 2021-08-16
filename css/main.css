@@ -12,12 +12,16 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
+a:hover {
+  cursor: pointer;
+}
 body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Cocogoose Pro', sans-serif;
-  /* max-width: 100vw; */
+}
+p {
+  font-size: 1.3rem;
 }
 .header {
   display: flex;
@@ -43,11 +47,6 @@ body {
   position: absolute;
   top: 0;
 }
-@media (min-height: 1000px) {
-  .header-bkg-container {
-    background-position: center top;
-  }
-}
 .page-title {
   color: var(--clr-accent);
   font-size: 15vh;
@@ -60,34 +59,13 @@ body {
   font-size: 4vh;
   margin-top: 2rem;
 }
-@media (max-width: 360px) {
-  .page-title {
-    font-size: 25vw;
-  }
-  .page-subtitle {
-    font-size: 6vw;
-  }
-}
-@media (min-width: 600px) {
-  .page-title {
-    padding-left: 1.5rem;
-  }
-}
 .section {
   display: flex;
   flex-direction: column;
   padding: 3rem 1.5rem;
 }
-@media (min-width: 600px) {
-  .section {
-    padding: 5rem 3rem;
-  }
-}
 .section p {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  line-height: 2;
 }
 .section span {
   font-weight: bold;
@@ -98,25 +76,11 @@ body {
   font-weight: bold;
   font-style: italic;
   text-transform: uppercase;
+  margin-bottom: 1em;
 }
 .split {
   display: flex;
   flex-direction: column;
-}
-@media (min-width: 1000px) {
-  .split {
-    flex-direction: row;
-  }
-  .split > * {
-    flex-basis: 100%;
-    margin-left: 2em;
-  }
-  .column-a {
-    order: 2;
-  }
-  .column-b {
-    order: 1;
-  }
 }
 .bkg-light {
   background-color: var(--clr-light);
@@ -124,6 +88,7 @@ body {
 }
 .example {
   text-align: center;
+  padding-top: 3rem;
 }
 .example img {
   width: 90vw;
@@ -159,4 +124,72 @@ body {
   font-size: 2.5rem;
   padding: 0 2.5rem;
   padding-top: 0.3rem;
+}
+
+
+/* SMALL DEVICES DOWN */
+@media screen and (max-width: 360px) {
+  .page-title {
+    font-size: 25vw;
+  }
+  .page-subtitle {
+    font-size: 6vw;
+  }
+}
+/* TABLET PORTRAIT UP */
+@media screen and (min-width: 600px) {
+  .page-title {
+    padding-left: 1.5rem;
+  }
+  .page-subtitle {
+    font-size: 5vw;
+  }
+  .section {
+    padding: 5rem 3rem;
+  }
+}
+/* TABLET LANDSCAPE UP */
+@media screen and (min-width: 900px) {
+  .split {
+    flex-direction: row;
+  }
+  .split > * {
+    flex-basis: 100%;
+    margin-left: 2em;
+  }
+  .column-a {
+    order: 2;
+  }
+  .column-b {
+    order: 1;
+  }
+  .example {
+    padding-top: 0;
+  }
+}
+/* DESKTOP UP */
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: 2rem;
+  }
+  .page-title {
+    font-size: 20vh;
+    left: 10rem;
+  }
+  .page-subtitle {
+    font-size: 10vh;
+    margin-top: 1rem;
+  }
+  .section {
+    justify-content: center;
+    padding: 5rem 10rem;
+    height: 100vh;
+  }
+  .section p {
+    line-height: 1.5;
+  }
+}
+/* BIG DESKTOP UP */
+@media screen and (min-width: 1800px) {
+
 }
