@@ -32,7 +32,6 @@ p {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  /* max-height: 1000px; */
   text-align: left;
   text-transform: uppercase;
   font-style: italic;
@@ -42,7 +41,8 @@ p {
 .header-bkg-container {
   background-image: url("../img/test-1.gif");
   background-position: center 70%;
-  background-repeat: space;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -161,18 +161,27 @@ p {
     padding-left: 1rem;
   }
 }
-/* TABLET PORTRAIT UP */
+/* SMALL TABLET LANDSCAPE UP */
 @media screen and (min-width: 600px) {
+  /* p {
+    font-size: 1.4rem;
+  } */
   .page-title {
     padding-left: 1.5rem;
   }
   .page-subtitle {
-    font-size: 5vw;
+    font-size: 7vw;
   }
   .section {
     padding: 5rem 3rem;
   }
+  @media (orientation: landscape) {
+    .page-subtitle {
+      font-size: 7vh;
+    }
+  }
 }
+
 /* TABLET LANDSCAPE UP */
 @media screen and (min-width: 900px) {
   .split {
@@ -181,6 +190,9 @@ p {
   .split > * {
     flex-basis: 100%;
     margin-left: 2em;
+  }
+  .double-column {
+    padding-left: 1.5rem;
   }
   .column-a {
     order: 2;
@@ -195,14 +207,14 @@ p {
 /* DESKTOP UP */
 @media screen and (min-width: 1200px) {
   p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .page-title {
-    font-size: 20vh;
+    font-size: 18vh;
     left: 10rem;
   }
   .page-subtitle {
-    font-size: 10vh;
+    font-size: 7vh;
     margin-top: 1rem;
   }
   .section {
@@ -213,8 +225,22 @@ p {
   .section p {
     line-height: 1.5;
   }
+  .double-column {
+    padding: 5rem;
+  }
 }
 /* BIG DESKTOP UP */
 @media screen and (min-width: 1800px) {
 
+}
+
+/* PORTRAIT ORIENTATION */
+@media screen and (orientation: portrait) {
+  .header {
+    border: 1px solid red;
+    min-height: 100vh;
+  }
+  .page-title {
+    font-size: 20vh;
+  }
 }
