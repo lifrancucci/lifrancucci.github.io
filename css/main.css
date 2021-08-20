@@ -39,10 +39,10 @@ p {
   overflow: hidden;
 }
 .header-bkg-container {
-  background-image: url("../img/test-1.gif");
+  background-image: url("../img/horizontal-day.gif");
   background-position: center 70%;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -64,6 +64,7 @@ p {
 .section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   padding: 3rem 1.5rem;
 }
@@ -150,12 +151,12 @@ p {
 
 
 /* SMALL DEVICES DOWN */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 360px) and (orientation: portrait){
   .page-title {
     font-size: 25vw;
   }
   .page-subtitle {
-    font-size: 6vw;
+    font-size: 7vw;
   }
   .section {
     padding-left: 1rem;
@@ -176,6 +177,9 @@ p {
     padding: 5rem 3rem;
   }
   @media (orientation: landscape) {
+    .page-title {
+      font-size: 18vh;
+    }
     .page-subtitle {
       font-size: 7vh;
     }
@@ -237,10 +241,9 @@ p {
 /* PORTRAIT ORIENTATION */
 @media screen and (orientation: portrait) {
   .header {
-    border: 1px solid red;
     min-height: 100vh;
   }
-  .page-title {
+  /* .page-title {
     font-size: 20vh;
-  }
+  } */
 }
