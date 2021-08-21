@@ -96,13 +96,40 @@ p {
 }
 
 /* LANGUAGES */
-.lang-en {
+/* .lang-bar {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+.lang-bar ul {
+  display: flex;
+  background-color: var(--clr-accent);
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.5;
+}
+.lang-bar ul:hover {
+  opacity: 1;
+}
+.lang-bar ul > * {
+  padding: 0 0.5em;
+}
+#switch-en {
+  border-right: 1px solid var(--clr-light);
+}
+.lang-bar li {
   display: block;
 }
-.lang-es {
+ */
+.lang-en {
   display: none;
 }
-
+.lang-es {
+  display: block;
+}
 
 .bkg-light {
   background-color: var(--clr-light);
