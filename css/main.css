@@ -98,16 +98,16 @@ p {
   background-color: var(--clr-light);
   color: var(--clr-dark);
 }
-.example {
+.section-img {
   text-align: center;
   padding-top: 3rem;
 }
-.example img {
+.section-img img {
   width: 90vw;
   max-width: 450px;
   filter: grayscale(100%);
 }
-.example img:hover {
+.section-img img:hover {
   animation: img-color 0.2s normal linear forwards;
 }
 @keyframes img-color {
