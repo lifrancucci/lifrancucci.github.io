@@ -94,6 +94,16 @@ p {
   display: flex;
   flex-direction: column;
 }
+
+/* LANGUAGES */
+.lang-en {
+  display: block;
+}
+.lang-es {
+  display: none;
+}
+
+
 .bkg-light {
   background-color: var(--clr-light);
   color: var(--clr-dark);
