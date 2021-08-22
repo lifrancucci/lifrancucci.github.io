@@ -32,7 +32,6 @@ p {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   position: fixed;
-  display: none;
   top: 0;
   right: 0;
   z-index: 99;
