@@ -32,6 +32,7 @@ p {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   position: fixed;
+  display: none;
   top: 0;
   right: 0;
   z-index: 99;
@@ -238,6 +239,9 @@ p {
     flex-basis: 100%;
     margin-left: 2em;
   }
+  .section-img {
+    padding-top: 0;
+  }
   .double-column {
     padding-left: 1.5rem;
   }
@@ -267,7 +271,6 @@ p {
   .section {
     justify-content: center;
     padding: 5rem 10rem;
-    /* height: 100vh; */
   }
   .section p {
     line-height: 1.5;
@@ -286,7 +289,4 @@ p {
   .header {
     min-height: 100vh;
   }
-  /* .page-title {
-    font-size: 20vh;
-  } */
 }
